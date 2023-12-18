@@ -26,7 +26,7 @@ def login():
     
     # check db for username and password
     cursor = mysql.connection.cursor()
-    res = cursor.execute(
+    res = zcursor.execute(
         "SELECT email, password FROM user WHERE email=%s", (auth.username,)
     )
     
